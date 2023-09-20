@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="addToDo()">
+  <p>Title</p>
+  <input type="text" formControlName="title">
+  <p>Description</p>
+  <input type="text" formControlName="description">
+
+  <p>Completed? If yes then mark it</p>
+  <input type="checkbox" value=""  formControlName="completed">
+
+  <button class="btn btn-success" type="submit">Add</button>
+  <a class="btn btn-warning" routerLink="/">Show all ToDos</a>
+</form>

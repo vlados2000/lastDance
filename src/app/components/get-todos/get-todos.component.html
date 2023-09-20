@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <a routerLink="/add-todo" class="btn btn-success">Add ToDo</a>
+  </div>
+  <h2 style="color: orangered">TODO:</h2>
+</div>
+
+<div>
+  <div *ngFor="let toDo of toDos">
+    <div class="card" style="width: 25rem;">
+          <p>ToDo ID</p>
+          <p><b>{{toDo.id}}</b></p>
+
+          <p>Title</p>
+          <p><b>{{toDo.title}}</b></p>
+
+          <p>Description</p>
+          <p><b>{{toDo.description}}</b></p>
+
+          <p>Is it completed?</p>
+          <p><b>{{toDo.completed}}</b></p>
+
+        <div style="margin-left: 1rem">
+          <button class="btn btn-success"(click)="getOneToDo(toDo.id)">More details</button>
+          <button class="btn btn-info" (click)="deleteToDo(toDo.id)" >Delete</button>
+        </div>
+  </div>
+</div>
+</div>

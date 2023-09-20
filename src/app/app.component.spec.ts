@@ -12,16 +12,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'lastDance'`, () => {
+  it(`should have as title 'web-app-ui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lastDance');
+    expect(app.title).toEqual('web-app-ui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('lastDance app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('web-app-ui app is running!');
   });
 });
